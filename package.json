@@ -1,0 +1,23 @@
+{
+  "name": "rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/server.js",
+    "build": "babel dist -d app --source-maps",
+    "watch": "babel dist -d app --source-maps --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.18.10"
+  }
+}
