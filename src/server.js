@@ -1,5 +1,4 @@
 var express = require('express');
-const bookRouter = require('./routes');
 const sequelize = require('./models');
 
 var app = express();

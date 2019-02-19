@@ -7,9 +7,9 @@ let sequelize = new Sequelize(config.database.DATABASE, config.database.USERNAME
   operatorsAliases: false,
     port: 5432,
   
-    dialectOptions: {
-      ssl: true
-    },
+    // dialectOptions: {
+    //   ssl: true
+    // },
 
     pool: {
       max: 5,
@@ -18,6 +18,17 @@ let sequelize = new Sequelize(config.database.DATABASE, config.database.USERNAME
       idle: 10000
     }
 });
+
+const User = sequelize.define('user', {
+  firstName: {
+    type: Sequelize.STRING
+  },
+  lastName: {
+    type: Sequelize.STRING
+  }
+});
+
+User.sync({force: true});
 
 module.exports = sequelize;
 
